@@ -52,7 +52,8 @@
         };
     }
 
-     $(document).ready(function(){
+     $(window).on('load', function(){
+         setTimeout(function() {
 
          //========== SIDEBAR/SEARCH AREA ============= //
           $(".header-search-btn").on("click", function (e) {
@@ -137,10 +138,8 @@
             AOS.init({ once: true });
           }
         }, 500);
-         
-      });
-      
-  //========== COUNTER UP (Migrated to React Component) ============= //
+
+         //========== COUNTER UP (Migrated to React Component) ============= //
 
     //========== TESTIMONIAL AREA STARTS ============= // 
       $(".product-slider-single").slick({
@@ -592,4 +591,6 @@ $('.service5-carousel-area').owlCarousel({
       });
     //========== HISTORY TABS ENDS============= // 
 
+         }, 500);
+     });
 })(jQuery);
