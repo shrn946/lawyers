@@ -69,6 +69,24 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     }
   }, [pathname]);
 
+  // Load main.js dynamically after initial mount to prevent hydration/timing issues
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const loadScript = () => {
+        const existingScript = document.querySelector('script[src="/assets/js/main.js"]');
+        if (!existingScript) {
+          const script = document.createElement("script");
+          script.src = "/assets/js/main.js";
+          script.defer = true;
+          document.body.appendChild(script);
+        }
+      };
+
+      const timer = setTimeout(loadScript, 800);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <UIContext.Provider
       value={{

@@ -95,8 +95,8 @@
          //========== MODAL VIDEO ============= //
       $(".video-play-button1").modalVideo();
 
-    //========== LOAD FUNCTION ============= //
-     $(window).on('load', function(event) {
+     //========== LOAD FUNCTION ============= //
+     const initLoad = function() {
 
           //========== PROGRESS BAR ============= //
           $(".progress-bar").each(function(){
@@ -138,7 +138,13 @@
           }
         }, 500);
          
-      });
+     };
+
+     if (document.readyState === 'complete') {
+         initLoad();
+     } else {
+         $(window).on('load', initLoad);
+     }
       
   //========== COUNTER UP (Migrated to React Component) ============= //
 
