@@ -132,15 +132,21 @@
         //========== PRELOADER END ============= //
 
         //========== AOS ============= //
-         AOS.init();
+        setTimeout(() => {
+          if (typeof AOS !== 'undefined') {
+            AOS.init({ once: true });
+          }
+        }, 500);
          
       });
       
   //========== COUNTER UP============= //
+  setTimeout(() => {
     const ucounter = $('.counter');
-    if (ucounter.length > 0) {
-     ucounter.countUp();  
-    };
+    if (ucounter.length > 0 && $.fn.countUp) {
+      ucounter.countUp();  
+    }
+  }, 500);
 
     //========== TESTIMONIAL AREA STARTS ============= // 
       $(".product-slider-single").slick({
