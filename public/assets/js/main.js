@@ -307,8 +307,8 @@
           asNavFor: ".product-slider-single",
           autoplay:true,
           autoplayTimeout:500,
-          prevArrow: $('.testimonial-next-arrow'),
-          nextArrow: $('.testimonial-prev-arrow'),
+          prevArrow: '.testimonial-next-arrow',
+          nextArrow: '.testimonial-prev-arrow',
         });
         $('.slider-nav1').slick({
           slidesToShow: 1,
@@ -322,8 +322,8 @@
           focusOnSelect: true,
           autoplay:true,
           autoplayTimeout:500,
-          prevArrow: $('.testimonial-next-arrow1'),
-          nextArrow: $('.testimonial-prev-arrow1'),
+          prevArrow: '.testimonial-next-arrow1',
+          nextArrow: '.testimonial-prev-arrow1',
        });
        
       
@@ -333,8 +333,8 @@
           arrows: true,
           autoplay:true,
           nav:true,
-          prevArrow: $('.testimonial-next-arrow1'),
-          nextArrow: $('.testimonial-prev-arrow1'),
+          prevArrow: '.testimonial-next-arrow1',
+          nextArrow: '.testimonial-prev-arrow1',
           fade: true,
           loop:true,
           asNavFor: '.slider-nav1',
@@ -348,8 +348,8 @@
           arrows: true,
           infinite: false,
           asNavFor: '.slider-galeria-thumbs',
-          prevArrow: $('.testimonial-next-arrow'),
-          nextArrow: $('.testimonial-prev-arrow'),
+          prevArrow: '.testimonial-next-arrow',
+          nextArrow: '.testimonial-prev-arrow',
         });
         $('.slider-galeria-thumbs').slick({
           slidesToShow: 5,
@@ -361,8 +361,8 @@
           verticalSwiping: true,
           focusOnSelect: true,
           infinite: false,
-          prevArrow: $('.testimonial-next-arrow'),
-          nextArrow: $('.testimonial-prev-arrow'),
+          prevArrow: '.testimonial-next-arrow',
+          nextArrow: '.testimonial-prev-arrow',
         });
         
         
