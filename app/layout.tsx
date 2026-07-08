@@ -53,7 +53,6 @@ export default function RootLayout({
         <script src="/assets/js/plugins/jquery.nice-select.js" defer></script>
         <script src="/assets/js/plugins/aos.js" defer></script>
         <script src="/assets/js/plugins/slider.js" defer></script>
-        <script src="/assets/js/plugins/mobilemenu.js" defer></script>
         <script src="/assets/js/main.js" defer></script>
       </body>
     </html>
