@@ -1,5 +1,7 @@
 "use client";
 
+import Counter from "@/components/Counter";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -110,15 +112,15 @@ export default function Page() {
             <p data-aos="fade-left" data-aos-duration="1000">Explore our website to learn more about our services and get to know our team of tax attorneys. When you're ready to take control of tax.</p>
             <div className="counter-area" data-aos="fade-left" data-aos-duration="1200">
               <div className="counter-setion">
-                <h3><span className="counter">98</span>%</h3>
+                <h3><Counter end={98} />%</h3>
                 <p>Successful Cases</p>
               </div>
               <div className="counter-setion">
-                <h3><span className="counter">1</span>M+</h3>
+                <h3><Counter end={1} />M+</h3>
                 <p>Tax Return Field</p>
               </div>
               <div className="counter-setion">
-                <h3><span className="counter">50</span>M+</h3>
+                <h3><Counter end={50} />M+</h3>
                 <p>Trade Value Filled</p>
               </div>
             </div>

@@ -140,13 +140,7 @@
          
       });
       
-  //========== COUNTER UP============= //
-  setTimeout(() => {
-    const ucounter = $('.counter');
-    if (ucounter.length > 0 && $.fn.countUp) {
-      ucounter.countUp();  
-    }
-  }, 500);
+  //========== COUNTER UP (Migrated to React Component) ============= //
 
     //========== TESTIMONIAL AREA STARTS ============= // 
       $(".product-slider-single").slick({

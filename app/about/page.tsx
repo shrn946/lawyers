@@ -1,5 +1,7 @@
 "use client";
 
+import Counter from "@/components/Counter";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -84,7 +86,7 @@ export default function Page() {
                         <img  src="/assets/img/elements/elementor30.png" alt="" />
                     </div>
                     <div className="experiance-area">
-                        <h4><span className="counter">25</span>+</h4>
+                        <h4><Counter end={25} />+</h4>
                         <p>Years Of Experience</p>
                     </div>
                 </div>

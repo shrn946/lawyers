@@ -1,5 +1,7 @@
 "use client";
 
+import Counter from "@/components/Counter";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -56,11 +58,11 @@ export default function Page() {
 
                     <div className="content5-counter-area" data-aos="fade-left" data-aos-duration="1200">
                       <div className="content-counter text-center">
-                        <h3><span className="counter">546</span>+</h3>
+                        <h3><Counter end={546} />+</h3>
                         <p>Successful Cases</p>
                       </div>
                       <div className="content-counter text-center">
-                        <h3><span className="counter">550</span>+</h3>
+                        <h3><Counter end={550} />+</h3>
                         <p>Total Divorce Cases</p>
                       </div>
                     </div>
@@ -93,7 +95,7 @@ export default function Page() {
                             </div>
                             <div className="col-lg-6" data-aos="fade-up" data-aos-duration="1200">
                                 <div className="about5-img1 about5-textarea">
-                                    <h3><span className="counter">25</span>+</h3>
+                                    <h3><Counter end={25} />+</h3>
                                     <p>Years Of Experiance</p>
                                     <img  src="/assets/img/images/about5-img4.png" alt="" />
                                     <p>Divorce Satisfied Clients</p>

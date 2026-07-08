@@ -1,5 +1,7 @@
 "use client";
 
+import Counter from "@/components/Counter";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -35,17 +37,17 @@ export default function Page() {
                <div className="col-lg-2">
                 <div className="welcome3-counter-area">
                   <div className="welcome3-counter-box text-center" data-aos="fade-left" data-aos-duration="800">
-                    <h3><span className="counter">98</span>%</h3>
+                    <h3><Counter end={98} />%</h3>
                     <p>Successful Client</p>
                   </div>
 
                   <div className="welcome3-counter-box text-center" data-aos="fade-left" data-aos-duration="1000">
-                    <h3><span className="counter">1</span>M+</h3>
+                    <h3><Counter end={1} />M+</h3>
                     <p>Criminals Law Success</p>
                   </div>
 
                   <div className="welcome3-counter-box text-center" data-aos="fade-left" data-aos-duration="=1200">
-                    <h3>$<span className="counter">50</span>M</h3>
+                    <h3>$<Counter end={50} />M</h3>
                     <p>Trade Value Filled</p>
                   </div>
 

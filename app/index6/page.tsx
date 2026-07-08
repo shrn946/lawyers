@@ -1,5 +1,7 @@
 "use client";
 
+import Counter from "@/components/Counter";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -132,7 +134,7 @@ export default function Page() {
                             </div>
                             <div className="col-lg-6" data-aos="fade-up" data-aos-duration="1200">
                                 <div className="about5-img1 about5-textarea">
-                                    <h1><span className="counter">25</span>+</h1>
+                                    <h1><Counter end={25} />+</h1>
                                     <p>Years Of Experiance</p>
                                     <img  src="/assets/img/images/about7-img1.png" alt="" />
                                     <p>Divorce Satisfied Clients</p>

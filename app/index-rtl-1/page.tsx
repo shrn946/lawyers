@@ -1,5 +1,7 @@
 "use client";
 
+import Counter from "@/components/Counter";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -97,7 +99,7 @@ export default function Page() {
                           <img  src="/assets/img/icons/calculator1.svg" alt="" />
                       </div>
                       <div className="about-side-text">
-                          <h3><span className="counter">98</span>%</h3>
+                          <h3><Counter end={98} />%</h3>
                           <p>Successful Client</p>
                       </div>
                     </div>
@@ -109,7 +111,7 @@ export default function Page() {
                           <img  src="/assets/img/icons/tax-img2.svg" alt="" />
                       </div>
                       <div className="about-side-text">
-                          <h3><span className="counter">1</span>M+</h3>
+                          <h3><Counter end={1} />M+</h3>
                           <p>Tax Return Filled</p>
                       </div>
                     </div>
@@ -121,7 +123,7 @@ export default function Page() {
                             <img  src="/assets/img/icons/money-img1.svg" alt="" />
                         </div>
                         <div className="about-side-text">
-                            <h3>$<span className="counter">50</span>M</h3>
+                            <h3>$<Counter end={50} />M</h3>
                             <p>Trade Value Filled</p>
                         </div>
                       </div>
