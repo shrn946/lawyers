@@ -155,7 +155,7 @@ export default function Page() {
           <div className="service-navs-area">
             <div className="row align-items-center">
               <div className="col-lg-6">
-                <div className=" foter-carousel">
+                <div className="foter-carousel">
                   <div className="hero13-single-slider img5">
                     <img  src="/assets/img/images/service-img1-h3.png" alt="" />
                     <div className="elementors21">
@@ -194,7 +194,7 @@ export default function Page() {
               </div>
             </div>
             <div className="col-lg-6">
-             <div className=" slider-nav1">
+             <div className="slider-nav1">
               <div className="testimonial-listarea">
                 <h3>01 <img  src="/assets/img/elements/line-img1.png" alt="" />Lawyer</h3>
                 <h4>Federal Crime</h4>
@@ -325,7 +325,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="col-lg-4  col-md-6" data-aos="fade-up" data-aos-duration="1200">
+      <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200">
         <div className="work3-boxarea text-center">
           <div className="laws-icon1">
             <img  src="/assets/img/icons/law-img3.svg" alt="" />

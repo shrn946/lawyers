@@ -81,7 +81,7 @@ export default function Page() {
 {/*===== WELCOME ENDS =======*/}
 
 {/*===== ABOUT STARTS =======*/}
-  <div className="about1-section-area " id="about">
+  <div className="about1-section-area" id="about">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-6">
@@ -295,7 +295,7 @@ export default function Page() {
             <div className="tabs-author-area">
               <div className="tab-content" id="v-pills-tabContent">
 
-                <div className="tab-pane  show active fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                <div className="tab-pane show active fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                   <div className="tabs-author-images1">
                     <img  src="/assets/img/images/tabs-img1.png" alt="" className="tabs-img1" />
                     <div className="elementors-images">

@@ -19,12 +19,19 @@
                 setTimeout(() => {
                     if ($(target).length > 0) {
                         try {
-                            originalSlick.call(this, "slickSetOption", "asNavFor", target, true);
+                            // Safely extract the primary class selector to query the current DOM node
+                            const classList = (instance.attr('class') || '').split(' ').filter(c => c && c !== 'slick-initialized' && c !== 'slick-slider');
+                            if (classList.length > 0) {
+                                const selector = '.' + classList.join('.');
+                                $(selector).slick("slickSetOption", "asNavFor", target, true);
+                            } else {
+                                originalSlick.call(this, "slickSetOption", "asNavFor", target, true);
+                            }
                         } catch (e) {
                             console.warn("Deferred slick sync failed:", e);
                         }
                     }
-                }, 100);
+                }, 150);
                 return instance;
             }
             return originalSlick.apply(this, arguments);

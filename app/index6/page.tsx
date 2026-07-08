@@ -1036,7 +1036,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="col-lg-12" data-aos="fade-up" data-aos-duration="1200">
-                            <div className="contact-info ">
+                            <div className="contact-info">
                                <button type="submit">Free Case Evolution <i className="fa-regular fa-arrow-right"></i></button>
                             </div>
                         </div>

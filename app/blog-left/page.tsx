@@ -19,7 +19,7 @@ export default function Page() {
               </div>
               <div className="main-menu-ex homepage3">
                 <ul>
-                  <li><a href="#" className=" mainhome">Home <span><i className="fa-solid fa-angle-down"></i></span></a>
+                  <li><a href="#" className="mainhome">Home <span><i className="fa-solid fa-angle-down"></i></span></a>
                     <ul className="dropdown-padding">
                       <li><a href="/" >Home One</a></li>
                       <li><a href="/index1" >Home Two</a></li>

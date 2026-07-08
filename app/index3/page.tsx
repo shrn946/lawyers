@@ -272,14 +272,14 @@ export default function Page() {
                   <img  src="/assets/img/elements/polygon3.png" alt="" className="polygon1" />
                   <img  src="/assets/img/elements/polygon2.png" alt="" className="polygon2" />
                 </button>
-                <button className="nav-link " id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" data-aos="fade-left" data-aos-duration="1000">
+                <button className="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" data-aos="fade-left" data-aos-duration="1000">
                     <span>Information & Recources</span>
                     <span className="button-pera">We aim to simplify the intricacies of tax law, making it accessible and relevant to Tax.</span>
                     <img  src="/assets/img/elements/polygon3.png" alt="" className="polygon1" />
                     <img  src="/assets/img/elements/polygon2.png" alt="" className="polygon2" />
 
                 </button>
-                <button className="nav-link " id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false" data-aos="fade-left" data-aos-duration="1200">
+                <button className="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false" data-aos="fade-left" data-aos-duration="1200">
                     <span>Best Ongoing Support</span>
                     <span className="button-pera">We aim to simplify the intricacies of tax law, making it accessible and relevant to Tax.</span>
                     <img  src="/assets/img/elements/polygon3.png" alt="" className="polygon1" />
@@ -292,7 +292,7 @@ export default function Page() {
              <div className="col-lg-7 align-items-center">
               <div className="tabs-author-area" data-aos="fade-up" data-aos-duration="1000">
                 <div className="tab-content" id="v-pills-tabContent">
-                  <div className="tab-pane fade  show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                  <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     <div className="tabs-author-images1">
                       <img  src="/assets/img/images/tabs-img6.png" alt="" className="tabs-img1" />
                     </div>
@@ -490,7 +490,7 @@ export default function Page() {
             </div>
           </div>
           <div className="col-lg-8" data-aos="zoom-out" data-aos-duration="1000">
-            <div className="testimonial-owlcarousel-area owl-carousel tes5 ">
+            <div className="testimonial-owlcarousel-area owl-carousel tes5">
               <div className="testimonial-carousel-box">
                 <div className="testimonial-author-area">
                   <ul className="star-list">
