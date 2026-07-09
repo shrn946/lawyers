@@ -5,6 +5,7 @@ import ProgressWrap from "@/components/ProgressWrap";
 import Sidebar from "@/components/Sidebar";
 import SearchModal from "@/components/SearchModal";
 import MobileMenu from "@/components/MobileMenu";
+import BodyClassManager from "@/components/BodyClassManager";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({
       </head>
       <body>
         <UIProvider>
+          <BodyClassManager />
           <Preloader />
           <ProgressWrap />
           <Sidebar />

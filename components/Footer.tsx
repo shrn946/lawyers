@@ -62,17 +62,17 @@ export default function Footer() {
                     <ul>
                       <li>
                         <img src="/assets/img/icons/footer-email2.svg" alt="" />
-                        <a href="mailto:demolawsy@gmail.com">demolawsy@gmail.com</a>
+                        <a href="mailto:demolawsy@gmail.com" style={{ color: "black" }}>demolawsy@gmail.com</a>
                       </li>
                       <li>
                         <img src="/assets/img/icons/footer-location1.svg" alt="" />
-                        <span className="text-white">
+                        <span style={{ color: "black" }}>
                           8708 Technology Forest <br /> Pl Suite 125 -G, The <br /> Woodlands, TX 77381
                         </span>
                       </li>
                       <li>
                         <img src="/assets/img/icons/footer-phn.svg" alt="" />
-                        <a href="tel:123-456-7890">123-456-7890</a>
+                        <a href="tel:123-456-7890" style={{ color: "black" }}>123-456-7890</a>
                       </li>
                     </ul>
                   </div>
