@@ -1,0 +1,630 @@
+
+"use client";
+
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
+
+
+export default function Page() {
+  return (
+    <>
+      {/*============ Back to top Start============ */}
+    <button id="back-to-top-btn"><i className="fa-solid fa-arrow-up-long"></i></button>
+    {/*============ Back to top End============ */}
+    {/*============ Search area Start============ */}
+    <div className="header-search ">
+            <div className="header-search-area ">
+                       <h2 className="title">search here</h2>
+                       <div className="input-wrap">
+                        <input  type="text" placeholder="search here" />
+                        <button className="search-btn">search</button>
+                       </div>
+                        <button className="header-search-close ">
+                            <i className="fa-solid fa-xmark"></i>
+                        </button>
+            </div>
+            <div className="header-search-overlay"></div>
+    </div>
+    {/*============ Search Area End ============ */}
+    {/*============ mobile menu Start============ */}
+    <div className="mobile-menu ">
+            <div className="mobile-menu-area two p-relative">
+                        <div className="mobile-menu-logo">
+                            <a href="/demo-01/index-2">
+                            <img  src="/demo-01/assets/img/header/logo.svg" alt="" />
+                            </a>
+                        </div>
+                        <div className="accordion" id="accordionPanelsStayOpenExample">
+                            <div className="mobile-menu-accordion-item">
+                                <h2 className="mobile-menu-accordion-header">
+                                <a href="/demo-01/index-2">home</a>
+                                <button className="mobile-menu-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                     <i className="fa-solid fa-plus plus"></i>
+                                     <i className="fa-solid fa-minus minus"></i>
+                                </button>
+                                </h2> 
+                                <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse">
+                                <div className="mobile-menu-accordion-body">
+                                    <ul>
+                                        <li><a href="/demo-01/index-2"> <i className="fa-regular fa-angle-right"></i>home 01</a></li>
+                                        <li><a href="/demo-01/index-3"><i className="fa-regular fa-angle-right"></i>home 02</a></li>
+                                        <li><a href="/demo-01/index-4"><i className="fa-regular fa-angle-right"></i>home 03</a></li>
+                                        <li><a href="/demo-01/index-5"><i className="fa-regular fa-angle-right"></i>home 04</a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="mobile-menu-accordion-item">
+                                <h2 className="mobile-menu-accordion-header">
+                                <a href="/demo-01/about">about</a>
+                                <button className="mobile-menu-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                    <i className="fa-solid fa-plus plus"></i>
+                                     <i className="fa-solid fa-minus minus"></i>
+                                </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
+                                <div className="mobile-menu-accordion-body">
+                                    <ul>
+                                        <li><a href="/demo-01/about"><i className="fa-regular fa-angle-right"></i>about us </a></li>
+                                        
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="mobile-menu-accordion-item">
+                                <h2 className="mobile-menu-accordion-header">
+                                <a href="/demo-01/index-2">pages</a>
+                                <button className="mobile-menu-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                    <i className="fa-solid fa-plus plus"></i>
+                                     <i className="fa-solid fa-minus minus"></i>
+                                </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse">
+                                <div className="mobile-menu-accordion-body">
+                                    <ul>
+                                        <li><a href="/demo-01/practice"><i className="fa-regular fa-angle-right"></i>practice</a></li>
+                                        <li><a href="/demo-01/practice-details"><i className="fa-regular fa-angle-right"></i>practice details</a></li>
+                                        <li><a href="/demo-01/attorney"><i className="fa-regular fa-angle-right"></i>attorney</a></li>
+                                        <li><a href="/demo-01/attorney-details"><i className="fa-regular fa-angle-right"></i>attorney details </a></li>
+                                        <li><a href="/demo-01/price"><i className="fa-regular fa-angle-right"></i>price</a></li>
+                                        <li><a href="/demo-01/faq"><i className="fa-regular fa-angle-right"></i>FAQ</a></li>
+                                        <li><a href="/demo-01/product"><i className="fa-regular fa-angle-right"></i>product</a></li>
+                                        <li><a href="/demo-01/product-details"><i className="fa-regular fa-angle-right"></i>product details</a></li>
+                                        <li><a href="/demo-01/cart"><i className="fa-regular fa-angle-right"></i>Cart</a></li>
+                                        <li><a href="/demo-01/checkout"><i className="fa-regular fa-angle-right"></i>checkout</a></li>
+                                        <li><a href="/demo-01/error"><i className="fa-regular fa-angle-right"></i>error</a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="mobile-menu-accordion-item">
+                                <h2 className="mobile-menu-accordion-header">
+                                <a href="/demo-01/case">case-studies</a>
+                                <button className="mobile-menu-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                    <i className="fa-solid fa-plus plus"></i>
+                                     <i className="fa-solid fa-minus minus"></i>
+                                </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseFour" className="accordion-collapse collapse">
+                                <div className="mobile-menu-accordion-body">
+                                    <ul>
+                                        <li><a href="/demo-01/case"><i className="fa-regular fa-angle-right"></i>case-studies </a></li>
+                                        <li><a href="/demo-01/case-details"><i className="fa-regular fa-angle-right"></i>case-details</a></li>
+                                        
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="mobile-menu-accordion-item">
+                                <h2 className="mobile-menu-accordion-header">
+                                <a href="/demo-01/blog">blog</a>
+                                <button className="mobile-menu-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                    <i className="fa-solid fa-plus plus"></i>
+                                     <i className="fa-solid fa-minus minus"></i>
+                                </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseFive" className="accordion-collapse collapse">
+                                <div className="mobile-menu-accordion-body">
+                                    <ul>
+                                        <li><a href="/demo-01/blog"><i className="fa-regular fa-angle-right"></i>blog </a></li>
+                                        <li><a href="/demo-01/blog-standard"><i className="fa-regular fa-angle-right"></i>blog standard</a></li>
+                                        <li><a href="/demo-01/blog-details"><i className="fa-regular fa-angle-right"></i>blog details</a></li>
+                                        
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="mobile-menu-accordion-item">
+                                <div className="mobile-menu-accordion-header">
+                                <a href="/demo-01/contact">contact us</a>
+
+                                </div>
+                               
+                            </div>
+                        </div>
+                         <div className="social">
+                            <a href="https://www.facebook.com/">
+                            <i className="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                            <i className="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/">
+                            <i className="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/">
+                            <i className="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <button className="mobile-menu-close p-absolute">
+                            <i className="fa-solid fa-xmark"></i>
+                        </button>
+            </div>
+            <div className="mobile-menu-overlay"></div>
+    </div>
+    {/*============ momile menu End ============ */}
+     {/*============ Header Start============ */}
+    <header>
+        <div className="header p-absolute three">
+            <div className="header-menu-area three">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xl-2 col-lg-2 col-6">
+                                <div className="header-logo ">
+                                <a href="/demo-01/index-2">
+                                    <img  src="/demo-01/assets/img/header/logo.svg" alt="logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div className=" col-xl-7 col-lg-7 md-none">
+                             <div className="header-menu  two">
+                                <nav>
+                                    <ul >
+                                        <li className="sub-menu"><a href="/demo-01/index-2">home <i className="fa-solid fa-plus plus"></i><i className="fa-solid fa-minus minus"></i>
+                                        </a>
+                                            <ul className="dropdown-menu">
+                                                <li><a href="/demo-01/index-2"><i className="fa-solid fa-angle-right"></i>Home 01</a></li>
+                                                <li><a href="/demo-01/index-3"><i className="fa-solid fa-angle-right"></i>Home 02</a></li>
+                                                <li><a href="/demo-01/index-4"><i className="fa-solid fa-angle-right"></i>Home 03</a></li>
+                                                <li><a href="/demo-01/index-5"><i className="fa-solid fa-angle-right"></i>Home 04</a></li>
+                                            </ul>
+                                        </li>
+                                        <li className="sub-menu  "><a href="/demo-01/about">about us
+                                            <i className="fa-solid fa-plus plus"></i><i className="fa-solid fa-minus minus"></i>
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                                <li><a href="/demo-01/about"><i className="fa-solid fa-angle-right"></i>about us</a></li>
+                                            </ul>
+                                        </li>
+                                        <li className="sub-menu mega-menu-wrapper"><a href="#">pages
+                                            <i className="fa-solid fa-plus plus"></i><i className="fa-solid fa-minus minus"></i>
+                                        </a>
+                                            <ul className=" dropdown-menu mega-menu two flex justify-between">
+                                                <li>
+                                                    <span>pagelist one</span>
+                                                     <ul>
+                                                        <li><a href="/demo-01/index-2"><i className="fa-solid fa-angle-right"></i>home 01</a></li>
+                                                        <li><a href="/demo-01/index-3"><i className="fa-solid fa-angle-right"></i>home 02</a></li>
+                                                        <li><a href="/demo-01/index-4"><i className="fa-solid fa-angle-right"></i>home 03</a></li>
+                                                        <li><a href="/demo-01/index-5"><i className="fa-solid fa-angle-right"></i>home 04</a></li>
+                                                        <li><a href="/demo-01/about"><i className="fa-solid fa-angle-right"></i>about us</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span>pagelist two</span>
+                                                     <ul>
+                                                        <li><a href="/demo-01/practice"><i className="fa-solid fa-angle-right"></i>practice</a></li>
+                                                        <li><a href="/demo-01/practice-details"><i className="fa-solid fa-angle-right"></i>practice details</a></li>
+                                                        <li><a href="/demo-01/case"><i className="fa-solid fa-angle-right"></i>case</a></li>
+                                                        <li><a href="/demo-01/case-details"><i className="fa-solid fa-angle-right"></i>case details</a></li>
+                                                         <li><a href="/demo-01/attorney"><i className="fa-solid fa-angle-right"></i>attorney</a></li>
+                                                        <li><a href="/demo-01/attorney-details"><i className="fa-solid fa-angle-right"></i>attorney details</a></li>
+                                                        
+                                                    </ul>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <span>pagelist three</span>
+                                                   <ul>
+                                                        <li><a href="/demo-01/price"><i className="fa-solid fa-angle-right"></i>price</a></li>
+                                                        <li><a href="/demo-01/faq"><i className="fa-solid fa-angle-right"></i>FAQ</a></li>
+                                                        <li><a href="/demo-01/product"><i className="fa-solid fa-angle-right"></i>product</a></li>
+                                                        <li><a href="/demo-01/product-details"><i className="fa-solid fa-angle-right"></i>product details</a></li>
+                                                        <li><a href="/demo-01/cart"><i className="fa-solid fa-angle-right"></i>Cart</a></li>
+                                                        <li><a href="/demo-01/checkout"><i className="fa-solid fa-angle-right"></i>checkout</a></li>
+                                                        
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span>pagelist four</span>
+                                                    <ul>
+                                                        <li><a href="/demo-01/blog"><i className="fa-solid fa-angle-right"></i>blog</a></li>
+                                                        <li><a href="/demo-01/blog-standard"><i className="fa-solid fa-angle-right"></i>blog standard</a></li>
+                                                        <li><a href="/demo-01/blog-details"><i className="fa-solid fa-angle-right"></i>blog details</a></li>
+                                                        <li><a href="/demo-01/contact"><i className="fa-solid fa-angle-right"></i>contact</a></li>
+                                                        <li><a href="/demo-01/error"><i className="fa-solid fa-angle-right"></i>error 404</a></li>
+                                                        
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li className="sub-menu"><a href="/demo-01/case">case studies
+                                            <i className="fa-solid fa-plus plus"></i><i className="fa-solid fa-minus minus"></i>
+                                        </a>
+                                            <ul className="dropdown-menu">
+                                                <li><a href="/demo-01/case"><i className="fa-solid fa-angle-right"></i>case-studies</a></li>
+                                                <li><a href="/demo-01/case-details"><i className="fa-solid fa-angle-right"></i>case details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li className="sub-menu"><a href="/demo-01/blog">blog
+                                            <i className="fa-solid fa-plus plus"></i><i className="fa-solid fa-minus minus"></i>
+                                        </a>
+                                            <ul className="dropdown-menu">
+                                                <li><a href="/demo-01/blog"><i className="fa-solid fa-angle-right"></i>blog</a></li>
+                                                <li><a href="/demo-01/blog-standard"><i className="fa-solid fa-angle-right"></i>blog standard</a></li>
+                                                <li><a href="/demo-01/blog-details"><i className="fa-solid fa-angle-right"></i>blog details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li className="sub-menu"><a href="/demo-01/contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-6">
+                            <div className="header-button three text-right ">
+                                <button className="header-search-btn three">
+                                    <i className="fa-solid fa-search"></i>
+                                </button>
+                                <a href="/demo-01/contact" className="main-btn md-none">contact us<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4375 6.37085C14.6861 6.37085 14.9246 6.27208 15.1004 6.09626C15.2762 5.92045 15.375 5.68199 15.375 5.43335C15.375 5.18471 15.2762 4.94625 15.1004 4.77044C14.9246 4.59462 14.6861 4.49585 14.4375 4.49585H0.937499C0.688858 4.49585 0.450401 4.59462 0.274586 4.77044C0.0987701 4.94625 -9.53674e-07 5.18471 -9.53674e-07 5.43335C-9.53674e-07 5.68199 0.0987701 5.92045 0.274586 6.09626C0.450401 6.27208 0.688858 6.37085 0.937499 6.37085H14.4375Z" fill="white"/>
+                                <path d="M9.93751 10.8709C10.0605 10.8714 10.1824 10.847 10.2958 10.7994C10.4092 10.7517 10.5118 10.6816 10.5975 10.5934L15.0975 6.09338C15.1855 6.00745 15.2554 5.9048 15.3032 5.79146C15.3509 5.67811 15.3755 5.55637 15.3755 5.43338C15.3755 5.31039 15.3509 5.18865 15.3032 5.07531C15.2554 4.96196 15.1855 4.85931 15.0975 4.77338L10.5975 0.273381C10.5108 0.186708 10.4079 0.117956 10.2947 0.0710492C10.1815 0.0241424 10.0601 9.13242e-10 9.93751 0C9.81493 -9.13243e-10 9.69356 0.0241424 9.58032 0.0710492C9.46708 0.117956 9.36418 0.186708 9.27751 0.273381C9.19084 0.360053 9.12208 0.462948 9.07518 0.576191C9.02827 0.689434 9.00413 0.810808 9.00413 0.933381C9.00413 1.05595 9.02827 1.17733 9.07518 1.29057C9.12208 1.40381 9.19084 1.50671 9.27751 1.59338L13.11 5.43338L9.27751 9.27338C9.14756 9.40447 9.0592 9.57099 9.0235 9.75209C8.9878 9.93318 9.00636 10.1208 9.07684 10.2914C9.14732 10.462 9.26659 10.608 9.41969 10.7111C9.5728 10.8141 9.75293 10.8697 9.93751 10.8709Z" fill="white"/>
+                                </svg>
+                                </a>
+                                <button className="header-menu-bar ">
+                                    <i className="fa-solid fa-bars"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </header>
+    {/*============ Header End ============ */}
+    <main>
+    {/*============ Breadcumb Start ============ */}
+    <section className="breadcumb-wrapper text-center" data-bg-src="/demo-01/assets/img/breadcumb/breadcumb-bg.png">
+            <div className=" wow img-custom-anim-scale" data-wow-duration="1.5s" data-wow-delay="0s">
+                <h2 className="breadcumb-title">cases details</h2>
+            <p className="breadcumb-text"><a href="/demo-01/index-2">home </a> <i className="fa-regular fa-angles-right"></i>cases details</p>
+            </div>
+    </section>
+    {/*============ Breadcumb End============ */}
+    {/*============ Cases-details Start ============ */}
+    <div className="cases-details sec-pb-pt">
+        <div className="container fix">
+                <div className="row gx-lg-4 gx-md-2">
+                <div className="col-lg-12">
+                    <div className="cases-details-text flex md-block">
+                        <div className="cases-details-text-left  wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                            <h2>Here to Know About This Cases</h2>
+                            <p>
+                            The duration of a case varies based on complexity, court schedules, and other factors. We’ll give you an estimated timeline during your consultation summary of your legal concerns or goals.
+                            <br  /> <br  />
+                            We handle a wide range of cases including family law, criminal defense, personal injury, business law, and estate planning fees depend on the complexity of your case. We offer transparent pricing and initial consultations to discuss your needs any relevant documents, timelines, and questions about your case to help us provide the best advice.
+                            <br  /> <br  />
+                            Timelines vary depending on the nature of the case. We’ll provide an estimate after evaluating your situation we offer a free initial consultation to understand your needs and discuss how we can help bring any relevant documents, correspondence, and a summary of your legal concerns or goals.
+                        </p>
+                        </div>
+                        <div className="cases-details-text-right wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0.8s">
+                        <h3>Case Details</h3>
+                        <p>clients:</p>
+                        <span>Darlene Robertson</span>
+                        <p>Category :</p>
+                        <span>Marketing, Finance</span>
+                        <p>date:</p>
+                        <span>Dec 10 2024</span>
+                       </div>
+                    </div>              
+                 </div>
+                <div className="col-md-6  wow img-custom-anim-right" data-wow-duration="1.5s" data-wow-delay="0s">
+                    <div className="cases-details-thumb fix cover">
+                        <img  src="/demo-01/assets/img/case-studies/blog-details-1.jpg" alt="" />
+                    </div>
+                </div>
+                <div className="col-md-6  wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0s">
+                    <div className="cases-details-thumb fix cover">
+                        <img  src="/demo-01/assets/img/case-studies/blog-details-2.jpg" alt="" />
+                    </div>
+                </div>
+                <div className="col-lg-12  wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0s">
+                    <div className="cases-details-text">
+                       <div className="case-details-text-left">
+                         <h3>Strong Representation, Proven Success</h3>
+                        <p>Our pricing depends on the complexity of the case. We offer transparent billing and free initial consultations to discuss your needs vary based on the type of case, but we aim to keep you informed and expedite the process as much as possible consultations to discuss your needs. <br  /><br  />
+                        Timelines vary based on the type of case, but we aim to keep you informed and expedite the process as much as possible bring any relevant documents, contracts, or records related to your case for a comprehensive review. <br  /> <br  />
+                        The duration of a case varies based on complexity, court schedules, and other factors. We’ll give you an estimated timeline during your consultation documents timeline kinds correspondence, and a summary of your legal concerns or goals..</p>
+                       </div>
+                       
+                    </div>
+                </div>
+                <div className="col-md-4  wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0s">
+                    <div className="cases-details-thumb fix cover">
+                        <img  src="/demo-01/assets/img/case-studies/blog-details-3.jpg" alt="" />
+                    </div>
+                </div>
+                <div className="col-md-4  wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                    <div className="cases-details-thumb fix cover">
+                        <img  src="/demo-01/assets/img/case-studies/blog-details-4.jpg" alt="" />
+                    </div>
+                </div>
+                <div className="col-md-4  wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+                    <div className="cases-details-thumb fix cover">
+                        <img  src="/demo-01/assets/img/case-studies/blog-details-5.jpg" alt="" />
+                    </div>
+                </div>
+                
+                <div className="col-lg-12">
+                    <div className="cases-details-text">
+                        <h3>Final Result</h3>
+                        <p>Our firm specializes in family law, criminal defense, corporate law, personal injury, and estate planning offer flexible payment options, including hourly rates, flat fees, and contingency-based pricing, depending on the case type. <br  />
+                        Please bring any documents related to your case, including contracts, emails, legal notices, or other relevant paperwork timelines vary based on complexity and legal process requirements. We provide an estimated timeline after reviewing your case we offer a free initial consultation to discuss your case and explore how we can assist you.</p>
+                    </div>
+                </div>
+                        </div>
+            {/* <div className="swpier cases-details-2">
+                <div className="swiper-wrapper">
+                    <div className="swiper-slide">
+                     
+                    </div>
+                    <div className="swiper-slide">
+                         <div className="row gx-lg-4 gx-md-2">
+                            <div className="col-lg-12">
+                                <div className="cases-details-text flex md-block">
+                                    <div className="cases-details-text-left">
+                                        <h2>Here to Know About This Cases</h2>
+                                        <p>
+                                        The duration of a case varies based on complexity, court schedules, and other factors. We’ll give you an estimated timeline during your consultation summary of your legal concerns or goals.
+                                        <br  /> <br  />
+                                        We handle a wide range of cases including family law, criminal defense, personal injury, business law, and estate planning fees depend on the complexity of your case. We offer transparent pricing and initial consultations to discuss your needs any relevant documents, timelines, and questions about your case to help us provide the best advice.
+                                        <br  /> <br  />
+                                        Timelines vary depending on the nature of the case. We’ll provide an estimate after evaluating your situation we offer a free initial consultation to understand your needs and discuss how we can help bring any relevant documents, correspondence, and a summary of your legal concerns or goals.
+                                    </p>
+                                    </div>
+                                    <div className="cases-details-text-right">
+                                    <h3>Case Details</h3>
+                                    <p>clients:</p>
+                                    <span>Brooklyn Simmons</span>
+                                    <p>Category :</p>
+                                    <span>Financial Lawyer</span>
+                                    <p>date:</p>
+                                    <span>Feb 24 2025</span>
+                                </div>
+                                </div>              
+                            </div>
+                            <div className="col-md-6">
+                                <div className="cases-details-thumb fix cover">
+                                    <img  src="/demo-01/assets/img/case-studies/blog-details-2.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="cases-details-thumb fix cover">
+                                    <img  src="/demo-01/assets/img/case-studies/blog-details-1.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div className="col-lg-12">
+                                <div className="cases-details-text">
+                                <div className="case-details-text-left">
+                                    <h3>Strong Representation, Proven Success</h3>
+                                    <p>Our pricing depends on the complexity of the case. We offer transparent billing and free initial consultations to discuss your needs vary based on the type of case, but we aim to keep you informed and expedite the process as much as possible consultations to discuss your needs. <br  /><br  />
+                                    Timelines vary based on the type of case, but we aim to keep you informed and expedite the process as much as possible bring any relevant documents, contracts, or records related to your case for a comprehensive review. <br  /> <br  />
+                                    The duration of a case varies based on complexity, court schedules, and other factors. We’ll give you an estimated timeline during your consultation documents timeline kinds correspondence, and a summary of your legal concerns or goals..</p>
+                                </div>
+                                
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="cases-details-thumb cover fix">
+                                    <img  src="/demo-01/assets/img/case-studies/blog-details-4.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="cases-details-thumb fix cover">
+                                    <img  src="/demo-01/assets/img/case-studies/blog-details-5.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="cases-details-thumb fix cover">
+                                    <img  src="/demo-01/assets/img/case-studies/blog-details-3.jpg" alt="" />
+                                </div>
+                            </div>
+                            
+                            <div className="col-lg-12">
+                                <div className="cases-details-text">
+                                    <h3>Final Result</h3>
+                                    <p>Our firm specializes in family law, criminal defense, corporate law, personal injury, and estate planning offer flexible payment options, including hourly rates, flat fees, and contingency-based pricing, depending on the case type. <br  />
+                                    Please bring any documents related to your case, including contracts, emails, legal notices, or other relevant paperwork timelines vary based on complexity and legal process requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
+
+            <div className="cases-details-btn-wrapper">
+                <div className=" btn-area flex wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                    <a href="/demo-01/case-details" className="swiper-cases-button-next btn-wrap">
+                        <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.04264 7.07882C0.766376 7.07882 0.501424 6.96907 0.306074 6.77372C0.110723 6.57837 0.000976562 6.31342 0.000976562 6.03715C0.000976562 5.76088 0.110723 5.49593 0.306074 5.30058C0.501424 5.10523 0.766376 4.99548 1.04264 4.99548H16.0426C16.3189 4.99548 16.5839 5.10523 16.7792 5.30058C16.9746 5.49593 17.0843 5.76088 17.0843 6.03715C17.0843 6.31342 16.9746 6.57837 16.7792 6.77372C16.5839 6.96907 16.3189 7.07882 16.0426 7.07882H1.04264Z" fill="white"/>
+                        <path d="M6.0422 12.0788C5.90552 12.0793 5.77013 12.0523 5.64412 11.9993C5.51812 11.9463 5.4041 11.8685 5.30887 11.7704L0.308866 6.77042C0.211099 6.67495 0.13341 6.56089 0.0803673 6.43495C0.0273248 6.30901 0 6.17374 0 6.03709C0 5.90044 0.0273248 5.76517 0.0803673 5.63923C0.13341 5.51329 0.211099 5.39923 0.308866 5.30376L5.30887 0.303756C5.40517 0.207454 5.5195 0.131062 5.64532 0.0789436C5.77115 0.0268249 5.90601 1.01471e-09 6.0422 0C6.17839 -1.01471e-09 6.31325 0.0268249 6.43908 0.0789436C6.5649 0.131062 6.67923 0.207454 6.77553 0.303756C6.87184 0.400059 6.94823 0.514387 7.00035 0.640213C7.05247 0.766038 7.07929 0.900897 7.07929 1.03709C7.07929 1.17328 7.05247 1.30814 7.00035 1.43397C6.94823 1.55979 6.87184 1.67412 6.77553 1.77042L2.5172 6.03709L6.77553 10.3038C6.91992 10.4494 7.0181 10.6344 7.05776 10.8357C7.09743 11.0369 7.07681 11.2453 6.9985 11.4349C6.92019 11.6244 6.78767 11.7866 6.61755 11.9012C6.44743 12.0157 6.24728 12.0775 6.0422 12.0788Z" fill="white"/>
+                        </svg>
+
+                    </a>
+                    <div className="info text-left">
+                        <span>Lawyer attorney modified</span>
+                        <p>previews</p>
+                    </div>
+                </div>
+                <div className="btn-area flex wow img-custom-anim-right" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                    <div className="info text-right">
+                        <span>Lawyer attorney</span>
+                        <p>next</p>
+                    </div>
+                    <a href="/demo-01/case-details" className="swiper-cases-button-next btn-wrap">
+                       <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.0413 7.07882C16.3176 7.07882 16.5826 6.96907 16.7779 6.77372C16.9733 6.57837 17.083 6.31342 17.083 6.03715C17.083 5.76088 16.9733 5.49593 16.7779 5.30058C16.5826 5.10523 16.3176 4.99548 16.0413 4.99548H1.04134C0.765074 4.99548 0.50012 5.10523 0.30477 5.30058C0.109419 5.49593 -0.000326157 5.76088 -0.000326157 6.03715C-0.000326157 6.31342 0.109419 6.57837 0.30477 6.77372C0.50012 6.96907 0.765074 7.07882 1.04134 7.07882H16.0413Z" fill="white"/>
+                        <path d="M11.0418 12.0788C11.1785 12.0793 11.3139 12.0523 11.4399 11.9993C11.5659 11.9463 11.6799 11.8685 11.7751 11.7704L16.7751 6.77042C16.8729 6.67495 16.9506 6.56089 17.0036 6.43495C17.0567 6.30901 17.084 6.17374 17.084 6.03709C17.084 5.90044 17.0567 5.76517 17.0036 5.63923C16.9506 5.51329 16.8729 5.39923 16.7751 5.30376L11.7751 0.303756C11.6788 0.207454 11.5645 0.131062 11.4387 0.0789436C11.3128 0.0268249 11.178 1.01471e-09 11.0418 0C10.9056 -1.01471e-09 10.7707 0.0268249 10.6449 0.0789436C10.5191 0.131062 10.4048 0.207454 10.3085 0.303756C10.2121 0.400059 10.1358 0.514387 10.0836 0.640213C10.0315 0.766038 10.0047 0.900897 10.0047 1.03709C10.0047 1.17328 10.0315 1.30814 10.0836 1.43397C10.1358 1.55979 10.2121 1.67412 10.3085 1.77042L14.5668 6.03709L10.3085 10.3038C10.1641 10.4494 10.0659 10.6344 10.0262 10.8357C9.98656 11.0369 10.0072 11.2453 10.0855 11.4349C10.1638 11.6244 10.2963 11.7866 10.4664 11.9012C10.6366 12.0157 10.8367 12.0775 11.0418 12.0788Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+{/*============ Cases-details End ============ */}
+    
+    </main>
+
+    {/*============ Footer Start ============ */}
+ <footer>
+     <div className="footer-contact-us" data-bg-src="/demo-01/assets/img/footer/bg-2.png">
+        <div className="row gx-0">
+            <div className="col-xxxl-5 col-xl-4 col-lg-4 md-none">
+                <div className="footer-contact-us-img cover">
+                    <img  src="/demo-01/assets/img/footer/Img(1).png" alt="" />
+                </div>
+            </div>
+            <div className="col-xxxl-7 col-xl-8 col-lg-8">
+                <div className="footer-contact-us-right ">
+                    <h3>The mission is to provide Lawyer  Services</h3>
+                        <a href="/demo-01/contact" className="main-btn black">
+                            contact us<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4375 6.37091C14.6861 6.37091 14.9246 6.27214 15.1004 6.09632C15.2762 5.92051 15.375 5.68205 15.375 5.43341C15.375 5.18477 15.2762 4.94631 15.1004 4.7705C14.9246 4.59468 14.6861 4.49591 14.4375 4.49591H0.937499C0.688858 4.49591 0.450401 4.59468 0.274586 4.7705C0.0987701 4.94631 -9.53674e-07 5.18477 -9.53674e-07 5.43341C-9.53674e-07 5.68205 0.0987701 5.92051 0.274586 6.09632C0.450401 6.27214 0.688858 6.37091 0.937499 6.37091H14.4375Z" fill="white"/>
+                            <path d="M9.9375 10.8709C10.0605 10.8714 10.1824 10.847 10.2958 10.7994C10.4092 10.7517 10.5118 10.6816 10.5975 10.5934L15.0975 6.09338C15.1855 6.00745 15.2554 5.9048 15.3032 5.79146C15.3509 5.67811 15.3755 5.55637 15.3755 5.43338C15.3755 5.31039 15.3509 5.18865 15.3032 5.07531C15.2554 4.96196 15.1855 4.85931 15.0975 4.77338L10.5975 0.273381C10.5108 0.186708 10.4079 0.117956 10.2947 0.0710492C10.1814 0.0241424 10.0601 9.13242e-10 9.9375 0C9.81493 -9.13243e-10 9.69355 0.0241424 9.58031 0.0710492C9.46707 0.117956 9.36417 0.186708 9.2775 0.273381C9.19083 0.360053 9.12208 0.462948 9.07517 0.576191C9.02826 0.689434 9.00412 0.810808 9.00412 0.933381C9.00412 1.05595 9.02826 1.17733 9.07517 1.29057C9.12208 1.40381 9.19083 1.50671 9.2775 1.59338L13.11 5.43338L9.2775 9.27338C9.14755 9.40447 9.05919 9.57099 9.02349 9.75209C8.9878 9.93318 9.00635 10.1208 9.07683 10.2914C9.14731 10.462 9.26658 10.608 9.41969 10.7111C9.57279 10.8141 9.75292 10.8697 9.9375 10.8709Z" fill="white"/>
+                            </svg>
+
+                        </a>
+                        <div className="bg"></div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div className="footer" data-bg-src="/demo-01/assets/img/footer/Bg.png">
+        
+        <div className="footer-middle p-relative">
+              <div className="container">
+                <div className="footer-middle-wrapper">
+                    <div className="footer-logo-area wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                        <div className="logo">
+                            <a href="/demo-01/index-2">
+                            <img  src="/demo-01/assets/img/footer/Logo.svg" alt="" />
+                            </a>
+                        </div>
+                        <p>We are committed to serving community and offer pro bono services  individuals who meet certain eligibility </p>
+                        <div className="call">
+                            <div className="call-icon">
+                                <img  src="/demo-01/assets/img/footer/call.svg" alt="" />
+                            </div>
+                            <a href="tel:+000(564)56825" className="number">+000 (564) 568 25</a>
+                        </div>
+                    </div>
+                <div className="footer-service wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                    <h3>our services</h3>
+                    <ul>
+                        <li><a href="/demo-01/practice"><i className="fa-regular fa-angle-right"></i>Business Formation</a></li>
+                        <li><a href="/demo-01/practice"><i className="fa-regular fa-angle-right"></i>Corporate Law</a></li>
+                        <li><a href="/demo-01/practice"><i className="fa-regular fa-angle-right"></i>Employment Law</a></li>
+                        <li><a href="/demo-01/practice"><i className="fa-regular fa-angle-right"></i>Intellectual Property La</a></li>
+                        <li><a href="/demo-01/practice"><i className="fa-regular fa-angle-right"></i>Real Estate Law</a></li>
+                        
+                       
+                    </ul>
+                </div>
+                <div className="footer-pages wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+                    <h3>pages</h3>
+                    <ul>
+                        <li><a href="/demo-01/about"><i className="fa-regular fa-angle-right"></i>About Us</a></li>
+                        <li><a href="/demo-01/practice-details"><i className="fa-regular fa-angle-right"></i>Services</a></li>
+                        <li><a href="/demo-01/about"><i className="fa-regular fa-angle-right"></i>Get In Touch</a></li>
+                        <li><a href="/demo-01/about"><i className="fa-regular fa-angle-right"></i>How It Work</a></li>
+                        <li><a href="/demo-01/contact"><i className="fa-regular fa-angle-right"></i>Contact Us</a></li>
+                        
+                       
+                    </ul>
+                </div>
+                <div className="footer-post wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                    <h3>recent post</h3>
+                    <div className="footer-post-item d-flex">
+                        <div className="img   cover">
+                           <a href="/demo-01/blog-details">
+                             <img  src="/demo-01/assets/img/footer/recent-post-1.jpg" alt="" />
+                           </a>
+                        </div>
+                        <div className="info">
+                            <a href="/demo-01/blog-details" className="date"><i className="fa-solid fa-calendar-days"></i> 20 Jan, 2026</a>
+                            <a href="/demo-01/blog-details" className="title">Expert Counsel for Every an Challenge</a>
+                        </div>
+                    </div>
+                    <div className="footer-post-item d-flex">
+                        <div className="img   cover">
+                            <a href="/demo-01/blog-details">
+                                <img  src="/demo-01/assets/img/footer/recent-post-2.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div className="info">
+                            <a href="/demo-01/blog-details" className="date"><i className="fa-solid fa-calendar-days"></i> 20 Jan, 2026</a>
+                            <a href="/demo-01/blog-details" className="title">When It’s Legal, We’re Your a Team</a>
+                        </div>
+                    </div>
+                </div>
+               
+                </div>
+               
+              </div>
+               <div className="footer-bg cover">
+                <img  src="/demo-01/assets/img/footer/Bg.png" alt="" />
+              </div>
+        </div>
+         <div className="footer-bottom">
+              <div className="container">
+                <div className="footer-bottom-wrapper wow tpFadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                     <div className="footer-bottom-left">
+                    <p>Copyright © 2026 <a className="highlight" href="/demo-01/index-2">Lawia</a>. All Rights Reserved By <a href="/demo-01/index-2" className="highlight">Vecuro</a>. </p>
+                </div>
+                <div className="footer-bottom-right">
+                    <span>
+                        <a href="/demo-01/contact">Setting & Privacy</a> / 
+                    <a href="/demo-01/faq">FAQ </a> / 
+                    <a href="/demo-01/contact">Support</a>
+                    </span>
+                </div>
+                </div>
+                 
+              </div>
+        </div>
+    </div>
+</footer>
+    {/*============ Footer End ============ */}
+
+    {/*===================
+         ALL JS File
+    ====================*/}
+    {/* Jquery */}
+        
+    {/* bootstrap */}
+    
+    {/* Slick Slider */}
+    
+    {/* Swiper Slider */}
+    
+    {/* Counter Up */}
+    
+    
+    {/* WOW Animation */}
+    
+    {/* Magnific Popup */}
+    
+    {/* Main Js File */}
+    </>
+  );
+}
