@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function LawfinityClientManager() {
+  const pathname = usePathname();
+
   useEffect(() => {
     // 1. Initialize AOS (Animate On Scroll) dynamically (Non-blocking)
     const initAos = () => {
@@ -16,6 +19,7 @@ export function LawfinityClientManager() {
             easing: "ease-in-out",
             once: true,
           });
+          (window as any).AOS.refresh();
         }
       };
 
@@ -524,7 +528,7 @@ export function LawfinityClientManager() {
       document.removeEventListener("click", handleVideoPopup);
       document.removeEventListener("click", handleLoadMore);
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
