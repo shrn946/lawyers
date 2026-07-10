@@ -4,15 +4,29 @@ import { useEffect } from "react";
 
 export function LawfinityClientManager() {
   useEffect(() => {
-    // 1. Initialize AOS (Animate On Scroll)
+    // 1. Initialize AOS (Animate On Scroll) dynamically (Non-blocking)
     const initAos = () => {
-      if (typeof window !== "undefined" && (window as any).AOS) {
-        (window as any).AOS.init({
-          duration: 1000,
-          offset: 120,
-          easing: "ease-in-out",
-          once: true,
-        });
+      if (typeof window === "undefined") return;
+      
+      const setupAos = () => {
+        if ((window as any).AOS) {
+          (window as any).AOS.init({
+            duration: 1000,
+            offset: 120,
+            easing: "ease-in-out",
+            once: true,
+          });
+        }
+      };
+
+      if ((window as any).AOS) {
+        setupAos();
+      } else {
+        const script = document.createElement("script");
+        script.src = "https://unpkg.com/aos@2.3.1/dist/aos.js";
+        script.async = true;
+        script.onload = setupAos;
+        document.body.appendChild(script);
       }
     };
 
@@ -278,7 +292,98 @@ export function LawfinityClientManager() {
       });
     };
 
-    // 5. Initialize Video Lightboxes
+    // 5. Initialize Bootstrap Carousels (standard slide carousels)
+    const initBootstrapCarousels = () => {
+      const carousels = document.querySelectorAll(".carousel.slide");
+      carousels.forEach((carouselEl) => {
+        if (carouselEl.classList.contains("bs-carousel-initialized")) return;
+        carouselEl.classList.add("bs-carousel-initialized");
+
+        const items = Array.from(carouselEl.querySelectorAll(".carousel-item"));
+        const indicators = Array.from(carouselEl.querySelectorAll(".carousel-indicators li"));
+        const prevBtns = Array.from(carouselEl.querySelectorAll("[data-slide='prev'], .carousel-control-prev"));
+        const nextBtns = Array.from(carouselEl.querySelectorAll("[data-slide='next'], .carousel-control-next"));
+
+        if (items.length === 0) return;
+
+        let activeIdx = items.findIndex(item => item.classList.contains("active"));
+        if (activeIdx === -1) {
+          activeIdx = 0;
+          items[0].classList.add("active");
+        }
+
+        const showSlide = (index: number) => {
+          let nextIdx = index;
+          if (nextIdx >= items.length) {
+            nextIdx = 0;
+          } else if (nextIdx < 0) {
+            nextIdx = items.length - 1;
+          }
+
+          activeIdx = nextIdx;
+
+          items.forEach((item, idx) => {
+            if (idx === activeIdx) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+
+          indicators.forEach((indicator, idx) => {
+            const slideToAttr = indicator.getAttribute("data-slide-to");
+            if (slideToAttr !== null && parseInt(slideToAttr, 10) === activeIdx) {
+              indicator.classList.add("active");
+            } else if (idx === activeIdx) {
+              indicator.classList.add("active");
+            } else {
+              indicator.classList.remove("active");
+            }
+          });
+        };
+
+        // Bind indicator clicks
+        indicators.forEach((indicator) => {
+          indicator.addEventListener("click", () => {
+            const slideTo = indicator.getAttribute("data-slide-to");
+            if (slideTo !== null) {
+              showSlide(parseInt(slideTo, 10));
+            }
+          });
+        });
+
+        // Bind control button clicks
+        prevBtns.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            showSlide(activeIdx - 1);
+          });
+        });
+
+        nextBtns.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            showSlide(activeIdx + 1);
+          });
+        });
+
+        // Autoplay if data-ride="carousel" is set
+        if (carouselEl.getAttribute("data-ride") === "carousel") {
+          let autoplayInterval = setInterval(() => {
+            showSlide(activeIdx + 1);
+          }, 5000);
+
+          carouselEl.addEventListener("mouseenter", () => clearInterval(autoplayInterval));
+          carouselEl.addEventListener("mouseleave", () => {
+            autoplayInterval = setInterval(() => {
+              showSlide(activeIdx + 1);
+            }, 5000);
+          });
+        }
+      });
+    };
+
+    // 6. Initialize Video Lightboxes
     const handleVideoPopup = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const playBtn = target.closest(".popup-vimeo, .video-playicon, .client-videoicon");
@@ -346,7 +451,7 @@ export function LawfinityClientManager() {
       closeBtn.addEventListener("click", closeModal);
     };
 
-    // 6. Handle dynamic visible blog loading (load more page)
+    // 7. Handle dynamic visible blog loading (load more page)
     const handleLoadMore = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const loadMoreBtn = target.closest("#loadMore");
@@ -354,7 +459,6 @@ export function LawfinityClientManager() {
 
       e.preventDefault();
       
-      // Select hidden blog posts and show 3 of them
       const hiddenBlogs = document.querySelectorAll(".hide-blog");
       let shownCount = 0;
       hiddenBlogs.forEach((blog) => {
@@ -365,7 +469,6 @@ export function LawfinityClientManager() {
         }
       });
 
-      // Check if all are shown
       let anyHidden = false;
       hiddenBlogs.forEach((blog) => {
         if ((blog as HTMLElement).style.display === "none") {
@@ -395,12 +498,14 @@ export function LawfinityClientManager() {
     // Setup triggers
     const timerAos = setTimeout(initAos, 150);
     const timerCarousels = setTimeout(initCarousels, 250);
-    const timerCounters = setTimeout(initCounters, 400);
-    const timerLoadMore = setTimeout(initLoadMoreBlogs, 500);
+    const timerBsCarousels = setTimeout(initBootstrapCarousels, 350);
+    const timerCounters = setTimeout(initCounters, 450);
+    const timerLoadMore = setTimeout(initLoadMoreBlogs, 550);
 
     const observer = new MutationObserver(() => {
       initCarousels();
       initCounters();
+      initBootstrapCarousels();
     });
     observer.observe(document.body, { childList: true, subtree: true });
 
@@ -411,6 +516,7 @@ export function LawfinityClientManager() {
     return () => {
       clearTimeout(timerAos);
       clearTimeout(timerCarousels);
+      clearTimeout(timerBsCarousels);
       clearTimeout(timerCounters);
       clearTimeout(timerLoadMore);
       observer.disconnect();

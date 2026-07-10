@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import LawfinityClientManager from "@/components/demo04/LawfinityClientManager";
 
 export const metadata: Metadata = {
@@ -47,9 +46,6 @@ export default function LawfinityRootLayout({
       <body>
         <LawfinityClientManager />
         {children}
-
-        {/* Load AOS Library script */}
-        <Script src="https://unpkg.com/aos@2.3.1/dist/aos.js" strategy="beforeInteractive" />
       </body>
     </html>
   );
