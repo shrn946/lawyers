@@ -43,7 +43,7 @@ export default function AlegadaAboutPage() {
       <AlegadaPageBanner title="About Alegada" subtitle="Licensed & Certified to Practice Law" />
 
       {/* Section about s1 */}
-      <section className="section-about-s1">
+      <section className="about-s-1">
         <div className="container">
           <div className="row">
             <div className="col-md-6">

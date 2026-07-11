@@ -40,7 +40,7 @@ export default function AlegadaContactsPage() {
       <AlegadaPageBanner title="Contact Us" subtitle="Licensed & Certified to Practice Law" />
 
       {/* Contact Section 2 */}
-      <section className="contact-s2">
+      <section className="contact-section-2 about-s-1">
         <div className="container">
           <div className="row">
             {/* Quick Contact Form */}

@@ -42,7 +42,7 @@ export default function AlegadaPracticeAreas2Page() {
       <AlegadaPageBanner title="Practice Areas 2" subtitle="Licensed & Certified to Practice Law" />
 
       {/* Section 2 */}
-      <section className="section-2 pb-0">
+      <section className="section-2 quote">
         <div className="container">
           <div className="row" style={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}>
             <div className="col-md-3 quote-section-2">
